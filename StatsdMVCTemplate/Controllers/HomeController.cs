@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StatsdMVCTemplate.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace StatsdMVCTemplate.Controllers
 {
     public class HomeController : Controller
     {
+        [StatsdTimer]
         public ActionResult Index()
         {
             return View();
